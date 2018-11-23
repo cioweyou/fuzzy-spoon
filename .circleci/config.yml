@@ -24,10 +24,11 @@ jobs:
           command: ls
       - run:
           name: angular-build
-          command: node_modules/angular-cli/bin/ng build --prod
+          command: node_modules/@angular/cli/bin/ng build --prod
       - run:
           name: angular-test
-          command: node_modules/angular-cli/bin/ng test --watch=false --browsers=ChromeHeadless
+          command: node_modules/@angular/cli/bin/ng test --watch=false --browsers=ChromeHeadless
       # - run:
       #     name: angular-lint
       #     command: yarn lint
+      #/Users/mdk/dev/maxci/fuzzy-spoon/node_modules/@angular/cli/bin/ng
