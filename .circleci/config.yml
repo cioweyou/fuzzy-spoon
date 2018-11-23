@@ -20,11 +20,14 @@ jobs:
             - ~/.npm
             - ./node_modules
       - run:
+          name: list-current-dir
+          command: ls
+      - run:
           name: angular-build
-          command: ng build --prod
+          command: node_modules/angular-cli/bin/ng build --prod
       - run:
           name: angular-test
-          command: ng test --watch=false --browsers=ChromeHeadless
+          command: node_modules/angular-cli/bin/ng test --watch=false --browsers=ChromeHeadless
       # - run:
       #     name: angular-lint
       #     command: yarn lint
